@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociación Histórica de Cuzcurrita</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🏛️ AHC</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#patrimonio-cultural">Patrimonio Cultural</a></li>
+                <li><a href="#patrimonio-arquitectonico">Patrimonio Arquitectónico</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Asociación Histórica de Cuzcurrita</h1>
+            <p>Preservando el patrimonio cultural y arquitectónico de Cozcurrita de Río Tirón</p>
+            <a href="#patrimonio-cultural" class="btn btn-primary">Explorar</a>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>La Asociación Histórica de Cuzcurrita es una organización dedicada al estudio, documentación y preservación de la historia y patrimonio cultural de la Villa de Cozcurrita de Río Tirón.</p>
+            <p>Nuestro objetivo es compartir y mantener viva la memoria histórica de nuestra comunidad para las generaciones futuras.</p>
+        </div>
+    </section>
+
+    <!-- Galería Patrimonio Cultural -->
+    <section id="patrimonio-cultural" class="gallery">
+        <div class="container">
+            <h2>Patrimonio Cultural</h2>
+            <div class="gallery-grid" id="galeria-cultural">
+                <!-- Las imágenes se cargarán desde la carpeta images/patrimonio-cultural/ -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Patrimonio Arquitectónico -->
+    <section id="patrimonio-arquitectonico" class="gallery gallery-alt">
+        <div class="container">
+            <h2>Patrimonio Arquitectónico</h2>
+            <div class="gallery-grid" id="galeria-arquitectonico">
+                <!-- Las imágenes se cargarán desde la carpeta images/patrimonio-arquitectonico/ -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:AsociacionHistoricaCuzcurrita@gmail.com">AsociacionHistoricaCuzcurrita@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Ubicación</h3>
+                    <p>Cozcurrita de Río Tirón, La Rioja, España</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-info-circle"></i>
+                    <h3>Información</h3>
+                    <p>Dedicados a la preservación del patrimonio histórico</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Asociación Histórica de Cuzcurrita. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal para ver imágenes -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
