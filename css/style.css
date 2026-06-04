@@ -40,7 +40,7 @@ body {
 .navbar {
     background-color: var(--color-primary);
     color: var(--color-secondary);
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -53,9 +53,22 @@ body {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-img {
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+}
+
 .logo h1 {
     font-size: 1.8rem;
     font-weight: bold;
+    color: var(--color-secondary);
 }
 
 .nav-links {
@@ -479,10 +492,19 @@ body {
    =================================== */
 
 @media (max-width: 768px) {
+    .logo-img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+
     .nav-links {
         display: none;
         position: absolute;
-        top: 60px;
+        top: 80px;
         left: 0;
         flex-direction: column;
         width: 100%;
@@ -556,6 +578,19 @@ body {
 }
 
 @media (max-width: 480px) {
+    .logo-img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        top: 70px;
+    }
+
     .hero-content h1 {
         font-size: 1.5rem;
     }
