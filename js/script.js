@@ -91,6 +91,67 @@ document.addEventListener('keydown', (event) => {
 });
 
 // ===================================
+// FUNCIONALIDAD DE ÁREAS RESTRINGIDAS
+// ===================================
+
+// Verificar contraseña de Colaboradores
+function verificarColaboradores() {
+    const password = document.getElementById('colabPassword').value;
+    const passwordCorrecto = 'Cuzcurrita';
+    
+    if (password === passwordCorrecto) {
+        document.getElementById('colaboradores-login').classList.add('hidden');
+        document.getElementById('colaboradores-content').classList.remove('hidden');
+        document.getElementById('colabError').textContent = '';
+    } else {
+        document.getElementById('colabError').textContent = '❌ Contraseña incorrecta. Intente de nuevo.';
+        document.getElementById('colabPassword').value = '';
+    }
+}
+
+// Cerrar sesión de Colaboradores
+function cerrarColaboradores() {
+    document.getElementById('colaboradores-login').classList.remove('hidden');
+    document.getElementById('colaboradores-content').classList.add('hidden');
+    document.getElementById('colabPassword').value = '';
+    document.getElementById('colabError').textContent = '';
+}
+
+// Verificar contraseña de Directiva
+function verificarDirectiva() {
+    const password = document.getElementById('directivaPassword').value;
+    const passwordCorrecto = 'AHCExperience';
+    
+    if (password === passwordCorrecto) {
+        document.getElementById('directiva-login').classList.add('hidden');
+        document.getElementById('directiva-content').classList.remove('hidden');
+        document.getElementById('directivaError').textContent = '';
+    } else {
+        document.getElementById('directivaError').textContent = '❌ Contraseña incorrecta. Intente de nuevo.';
+        document.getElementById('directivaPassword').value = '';
+    }
+}
+
+// Cerrar sesión de Directiva
+function cerrarDirectiva() {
+    document.getElementById('directiva-login').classList.remove('hidden');
+    document.getElementById('directiva-content').classList.add('hidden');
+    document.getElementById('directivaPassword').value = '';
+    document.getElementById('directivaError').textContent = '';
+}
+
+// Permitir presionar Enter para enviar contraseña
+document.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        if (event.target.id === 'colabPassword') {
+            verificarColaboradores();
+        } else if (event.target.id === 'directivaPassword') {
+            verificarDirectiva();
+        }
+    }
+});
+
+// ===================================
 // ANIMACIONES AL SCROLL
 // ===================================
 
@@ -151,4 +212,4 @@ function actualizarGalerias() {
 // Llamar a la función al cargar la página
 window.addEventListener('load', actualizarGalerias);
 
-console.log('✅ Scripts cargados correctamente');
+console.log('✅ Scripts cargados correctamente - Áreas restringidas activadas');
