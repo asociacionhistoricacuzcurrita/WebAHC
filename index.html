@@ -19,6 +19,8 @@
                 <li><a href="#about">Nosotros</a></li>
                 <li><a href="#patrimonio-cultural">Patrimonio Cultural</a></li>
                 <li><a href="#patrimonio-arquitectonico">Patrimonio Arquitectónico</a></li>
+                <li><a href="#colaboradores">Colaboradores</a></li>
+                <li><a href="#directiva">Directiva</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
             <div class="hamburger">
@@ -63,6 +65,42 @@
             <h2>Patrimonio Arquitectónico</h2>
             <div class="gallery-grid" id="galeria-arquitectonico">
                 <!-- Las imágenes se cargarán desde la carpeta images/patrimonio-arquitectonico/ -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Colaboradores (Restringida) -->
+    <section id="colaboradores" class="restricted-section">
+        <div class="container">
+            <h2>Área de Colaboradores</h2>
+            <div id="colaboradores-login" class="login-form">
+                <p>Esta área es de acceso restringido. Por favor, ingrese su contraseña.</p>
+                <input type="password" id="colabPassword" placeholder="Ingrese la contraseña" class="password-input">
+                <button onclick="verificarColaboradores()" class="btn btn-primary">Acceder</button>
+                <p id="colabError" class="error-message"></p>
+            </div>
+            <div id="colaboradores-content" class="restricted-content hidden">
+                <p>Bienvenido al área de Colaboradores</p>
+                <p>Contenido exclusivo para colaboradores de la Asociación Histórica de Cuzcurrita.</p>
+                <button onclick="cerrarColaboradores()" class="btn btn-secondary">Cerrar sesión</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Directiva (Restringida) -->
+    <section id="directiva" class="restricted-section">
+        <div class="container">
+            <h2>Área de Directiva</h2>
+            <div id="directiva-login" class="login-form">
+                <p>Esta área es de acceso restringido. Por favor, ingrese su contraseña.</p>
+                <input type="password" id="directivaPassword" placeholder="Ingrese la contraseña" class="password-input">
+                <button onclick="verificarDirectiva()" class="btn btn-primary">Acceder</button>
+                <p id="directivaError" class="error-message"></p>
+            </div>
+            <div id="directiva-content" class="restricted-content hidden">
+                <p>Bienvenido al área de Directiva</p>
+                <p>Contenido exclusivo para miembros de la Directiva de la Asociación.</p>
+                <button onclick="cerrarDirectiva()" class="btn btn-secondary">Cerrar sesión</button>
             </div>
         </div>
     </section>
